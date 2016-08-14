@@ -11,6 +11,19 @@ html, body {
   min-height: 100vh;
 }
 
+.navbar {
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+.navbar-filler {
+  height: 64px;
+}
+
 .app-content md-content {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -52,7 +65,7 @@ hinnasto, ajanvaraus, yhteystiedot, kartta, esittely, aukioloaika, peruutus, jul
 }
 
 .app-content md-card {
-  margin: 20px;
+  margin: 20px 20px 0px 20px;
   color: #1f57af;
   background: #89aade;
   min-height: 110px;
@@ -91,13 +104,13 @@ hinnasto, ajanvaraus, yhteystiedot, kartta, esittely, aukioloaika, peruutus, jul
     align-self: stretch;
   }
   .app-content md-card {
-    margin: 10px;
+    margin:10px 10px 0px 10px;
   }
 }
 
 @media all and (min-width: 1024px) {
   .app-content md-card {
-    margin: 40px;
+    margin: 40px 40px 0px 40px;
   }
 }
 
