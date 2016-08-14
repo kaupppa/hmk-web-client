@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 import { AppComponent } from './app.component';
 import { appRoutingModule } from './app.routing';
 import { MdToolbarModule } from '@angular2-material/toolbar';
@@ -19,6 +19,10 @@ import { CardsModule } from './cards';
     CardsModule
     ],
   declarations: [AppComponent, Saapuminen, Etusivu, Hinnasto],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
