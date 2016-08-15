@@ -25,6 +25,8 @@ html, body {
 }
 
 .app-content md-content {
+  margin-left: 20px;
+  margin-right: 20px;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -74,6 +76,8 @@ hinnasto, ajanvaraus, yhteystiedot, kartta, esittely, aukioloaika, peruutus, jul
 
 @media all and (max-width: 900px) {
   .app-content md-content {
+    margin-left: 0;
+    margin-right: 0;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -113,7 +117,18 @@ hinnasto, ajanvaraus, yhteystiedot, kartta, esittely, aukioloaika, peruutus, jul
     margin: 40px 40px 0px 40px;
   }
 }
-
+@media all and (min-width: 1200px) {
+  .app-content md-content {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .app-content md-content {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
 .app-content md-card-subtitle {
   color: #1f57af;
 }
