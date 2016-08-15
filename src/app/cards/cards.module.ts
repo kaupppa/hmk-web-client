@@ -14,8 +14,6 @@ import { Julkinen } from './julkinen.card';
 import { Parkki } from './parkki.card';
 import { InfoService } from './info.service';
 import { PalvelutService } from './palvelut.service';
-import { Khl } from './khl.card';
-
 
 const cards: any[] = [
   Hinnasto,
@@ -26,8 +24,7 @@ const cards: any[] = [
   Aukioloaika,
   Peruutus,
   Julkinen,
-  Parkki,
-  Khl
+  Parkki
   ];
 
 const services: any[] = [

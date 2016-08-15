@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
       <julkinen></julkinen>
       <parkki></parkki>
       <kartta class="kartta"></kartta>
-      <ajanvaraus></ajanvaraus>
+      <yhteystiedot></yhteystiedot>
     </md-content>
   `
 })

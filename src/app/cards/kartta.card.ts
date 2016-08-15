@@ -9,7 +9,7 @@ declare var L: any;
   styles: [`
     #karttaId {
       height: 400px;
-      min-width: 200px;
+      min-width: 400px;
     }
   `],
   template: `

@@ -15,7 +15,7 @@ import { Info, InfoService } from './info.service';
         <img id="avatar" md-card-avatar src="assets/bussi.png">
       </md-card-header>
       <p>
-      Katso <a href="{{url}}">reittioppaasta</a> bussi ja metroreitit.
+      Katso <a href="{{url}}">reittioppaasta</a> bussi ja metroreitit
       </p>
       </md-card>
   `

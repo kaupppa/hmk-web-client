@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
       <esittely></esittely>
       <aukioloaika></aukioloaika>
       <ajanvaraus></ajanvaraus>
-      <khl></khl>
       <yhteystiedot></yhteystiedot>
     </md-content>
   `

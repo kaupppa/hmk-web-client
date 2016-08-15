@@ -39,7 +39,7 @@ html, body {
   align-items: center;
 }
 
-hinnasto, ajanvaraus, yhteystiedot, kartta, esittely, aukioloaika, peruutus, julkinen, parkki,khl {
+hinnasto, ajanvaraus, yhteystiedot, kartta, esittely, aukioloaika, peruutus, julkinen, parkki {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -57,7 +57,6 @@ hinnasto, ajanvaraus, yhteystiedot, kartta, esittely, aukioloaika, peruutus, jul
   margin: 20px 20px 0px 20px;
   color: #1f57af;
   background: #ccd9f0;
-  min-height: 110px;
   min-width: 320px;
 }
 
@@ -104,13 +103,13 @@ hinnasto, ajanvaraus, yhteystiedot, kartta, esittely, aukioloaika, peruutus, jul
     margin: 40px 40px 0px 40px;
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1200px) and (min-height: 800px) {
   .app-content md-content {
     margin-left: 100px;
     margin-right: 100px;
   }
 }
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1400px) and (min-height: 800px) {
   .app-content md-content {
     margin-left: 200px;
     margin-right: 200px;

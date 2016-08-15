@@ -13,7 +13,6 @@ export class Info {
   public kaupunki: string;
   public postiosoite: string;
   public tunnus: string;
-  public perustettu: number;
   public coord: Coord;
 }
 
@@ -27,7 +26,6 @@ export class InfoService {
     kaupunki: 'Helsinki',
     postiosoite: '00200',
     tunnus: '1368155-4',
-    perustettu: 1993,
     coord: {
       lat: 60.16081109440265,
       lon: 24.87903892993927

@@ -29,6 +29,7 @@ import { Info, InfoService } from './info.service';
 })
 export class Yhteystiedot {
   private info: Info;
+
   constructor(private service: InfoService) {
   }
 

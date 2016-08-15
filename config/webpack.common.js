@@ -7,7 +7,8 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 
 const METADATA = {
   title: 'Rekisteröity hieroja Minna Kauppinen (ent. Paaso), Lauttasaari',
-  description: 'Klassista hierontaa ja intialaista päähierontaa lauttasaaressa, hyvien kulkuyhteyksien varrella.'
+  description: 'Klassista hierontaa ja intialaista päähierontaa lauttasaaressa, hyvien kulkuyhteyksien varrella.' +
+  ' Osoite Lauttasaarentie 37, 00200 Helsinki'
 };
 
 module.exports = {

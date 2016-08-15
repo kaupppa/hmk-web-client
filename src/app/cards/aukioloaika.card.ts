@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
       <md-card-header>
         <img id="avatar" md-card-avatar src="assets/kello.png">
       </md-card-header>
-      <p>Avoinna arkisin sopimuksen mukaan.</p>
+      <p>Avoinna arkisin sopimuksen mukaan</p>
     </md-card>
   `
 })
