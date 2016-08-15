@@ -1,4 +1,4 @@
-# AN angular2 + webpack WEB client
+# An angular2 + webpack WEB client
 
 ## Images
 

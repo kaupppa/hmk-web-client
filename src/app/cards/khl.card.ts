@@ -16,13 +16,13 @@ import { Component } from '@angular/core';
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
 
-      -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-      align-content: center;
+      -webkit-align-content: flex-start;
+      -ms-flex-line-pack: flex-start;
+      align-content: flex-start;
 
       -webkit-align-items: center;
       -ms-flex-align: center;
