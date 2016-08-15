@@ -11,7 +11,6 @@ const METADATA = webpackMerge(commonConfig.metadata, {
   ENV: ENV,
   baseUrl: '/'
 });
-
 module.exports = webpackMerge(commonConfig, {
 
   metadata: METADATA,

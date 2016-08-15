@@ -7,11 +7,11 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 
 const METADATA = {
   title: 'Rekisteröity hieroja Minna Kauppinen (ent. Paaso), Lauttasaari',
-  description: 'Rekisteröity hieroja Minna Kauppinen (ent. Paaso). Klassista hiertontaa ja initialaista päähierontaa lauttasaaressa, helsinki.'
+  description: 'Klassista hierontaa ja intialaista päähierontaa lauttasaaressa, hyvien kulkuyhteyksien varrella.'
 };
 
 module.exports = {
-
+  metadata: METADATA,
   entry: {
     'polyfills': './src/polyfills.browser.ts',
     'vendor': './src/vendor.browser.ts',
@@ -88,9 +88,15 @@ module.exports = {
       from: 'node_modules/leaflet/dist/images',
       to: 'assets/leaflet/images'
     }]),
+
     new CopyWebpackPlugin([{
       from: 'src/assets/favicon.png',
       to: 'favicon.png'
+    }]),
+
+    new CopyWebpackPlugin([{
+      from: 'src/assets/robots.txt',
+      to: 'robots.txt'
     }]),
 
     new HtmlWebpackPlugin({
