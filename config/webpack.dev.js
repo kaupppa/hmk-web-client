@@ -8,7 +8,8 @@ const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
 const METADATA = webpackMerge(commonConfig.metadata, {
   host: 'localhost',
   port: 3000,
-  ENV: ENV
+  ENV: ENV,
+  baseUrl: '/'
 });
 
 module.exports = webpackMerge(commonConfig, {

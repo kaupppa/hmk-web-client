@@ -9,6 +9,7 @@ const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 const HOST = process.env.HOST || 'localhost';
@@ -16,10 +17,11 @@ const PORT = process.env.PORT || 8080;
 const METADATA = webpackMerge(commonConfig.metadata, {
   host: HOST,
   port: PORT,
-  ENV: ENV
+  ENV: ENV,
+  baseUrl: '/paukau3/'
 });
-
 module.exports = webpackMerge(commonConfig, {
+  metadata: METADATA,
   debug: false,
   devtool: 'source-map',
   output: {
@@ -45,6 +47,13 @@ module.exports = webpackMerge(commonConfig, {
       compress: { screw_ie8: true },
       comments: false
     }),
+    new CompressionPlugin({
+      asset: "[path].[query].gz",
+      algorithm: "gzip",
+      test: /\.js$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
   ],
 
   tslint: {

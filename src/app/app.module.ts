@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {LocationStrategy, HashLocationStrategy} from "@angular/common";
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AppComponent } from './app.component';
 import { appRoutingModule } from './app.routing';
 import { MdToolbarModule } from '@angular2-material/toolbar';
