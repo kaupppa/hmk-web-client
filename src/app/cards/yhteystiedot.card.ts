@@ -10,7 +10,7 @@ import { Info, InfoService } from './info.service';
     }
   `],
   template: `
-    <md-card [style.background]="'#aec4e8'">
+    <md-card>
       <md-card-header>
         <img id="avatar" md-card-avatar src="assets/kirjekuori.png">
       </md-card-header>

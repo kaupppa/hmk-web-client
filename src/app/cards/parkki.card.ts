@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
     }
   `],
   template: `
-    <md-card [style.background]="'#ccd9f0'">
+    <md-card>
       <md-card-header>
         <img id="avatar" md-card-avatar src="assets/auto.png">
       </md-card-header>
