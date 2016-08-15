@@ -14,13 +14,26 @@ import { Palvelu, PalvelutService } from './palvelut.service';
     .oikea {
       text-align: right;
     }
+    .hinnasto table {
+      margin: 20px;
+    }
     .hinnasto td {
-      padding: 5px 15px 5px 0px;
+      padding: 10px;
     }
     .hinnasto th {
-      padding: 5px 15px 5px 0px;
+      padding: 10px;
     }
-    .palvelu:nth-child(odd) {background-color: #aec4e8}
+    .palvelu:nth-child(odd) {
+      background-color: #aec4e8
+    }
+    .palvelu td:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    .palvelu td:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
   `],
   template: `
     <md-card>
