@@ -17,10 +17,10 @@ import { Component } from '@angular/core';
   `],
   template: `
     <md-toolbar color="navbar">
-      <a md-button [routerLinkActive]="['active-link']" routerLink="/"
-        [routerLinkActiveOptions]="{exact:true}">Etusivu</a>
-      <a md-button [routerLinkActive]="['active-link']" routerLink="/hinnasto">Hinnasto</a>
-      <a md-button [routerLinkActive]="['active-link']" routerLink="/saapuminen">Saapuminen</a>
+      <button md-button [routerLinkActive]="['active-link']" routerLink="/"
+        [routerLinkActiveOptions]="{exact:true}">Etusivu</button>
+      <button md-button [routerLinkActive]="['active-link']" routerLink="/hinnasto">Hinnasto</button>
+      <button md-button [routerLinkActive]="['active-link']" routerLink="/saapuminen">Saapuminen</button>
     </md-toolbar>
   `
 })

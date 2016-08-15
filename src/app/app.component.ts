@@ -10,8 +10,7 @@ import { NavBar } from './navbar';
   ],
   template: `
     <div class="app-content">
-      <navbar class="navbar"></navbar>
-      <div class="navbar-filler"></div>
+      <navbar></navbar>
       <router-outlet></router-outlet>
     </div>
   `

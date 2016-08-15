@@ -11,19 +11,6 @@ html, body {
   min-height: 100vh;
 }
 
-.navbar {
-  width: 100%;
-  height: 200px;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 1;
-}
-
-.navbar-filler {
-  height: 64px;
-}
-
 .app-content md-content {
   margin-left: 20px;
   margin-right: 20px;
