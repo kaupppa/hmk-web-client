@@ -22,7 +22,7 @@ export class InfoService {
   private info: Info = {
     nimi: 'Rekisteröity hieroja Minna Kauppinen',
     henkiloNimi: 'Minna Kauppinen (ent. Paaso)',
-    puh: '050 547 7811',
+    puh: '050 5477 811',
     katuosoite: 'Lauttasaarentie 37',
     kaupunki: 'Helsinki',
     postiosoite: '00200',

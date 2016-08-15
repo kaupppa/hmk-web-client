@@ -8,17 +8,22 @@ import { Info, InfoService } from './info.service';
     #avatar {
       border-radius: 0;
     }
+    .yhteystieto {
+      font-size: 14px;
+      padding: 0;
+      margin: 2px;
+    }
   `],
   template: `
     <md-card>
       <md-card-header>
         <img id="avatar" md-card-avatar src="assets/kirjekuori.png">
       </md-card-header>
-      <p>{{info.henkiloNimi}}</p>
-      <p>Puh. {{info.puh}}</p>
-      <p>{{info.katuosoite}}</p>
-      <p>{{info.postiosoite}} {{info.kaupunki}}</p>
-      <p>Y-tunnus {{info.tunnus}}</p>
+      <p class="yhteystieto">{{info.henkiloNimi}}</p>
+      <p class="yhteystieto">Puh. {{info.puh}}</p>
+      <p class="yhteystieto">{{info.katuosoite}}</p>
+      <p class="yhteystieto">{{info.postiosoite}} {{info.kaupunki}}</p>
+      <p class="yhteystieto">Y-tunnus {{info.tunnus}}</p>
     </md-card>
   `
 })

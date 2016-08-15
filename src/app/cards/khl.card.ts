@@ -68,7 +68,7 @@ import { Component } from '@angular/core';
           <a href="http://www.khl.fi/"><img class="khl-img" src="assets/khl-logo.png"></a>
         </div>
         <div class="khl-text">
-          <p>KHL:n jäsen</p>
+          <p><a href="http://www.khl.fi/">KHL:n</a> jäsen.</p>
         </div>
       </div>
     </md-card>
