@@ -2,35 +2,35 @@ import { Component } from '@angular/core';
 import { Palvelu, PalvelutService } from './palvelut.service';
 
 @Component({
-  selector: 'hinnasto',
+  selector: 'hinnat',
   providers: [PalvelutService],
   styles: [`
-    .hinnasto table {
+    .app-hinnat table {
       border-collapse: collapse;
     }
-    .vasen {
+    .app-vasen {
       text-align: left;
     }
-    .oikea {
+    .app-oikea {
       text-align: right;
     }
-    .hinnasto table {
+    .app-hinnat table {
       margin: 20px;
     }
-    .hinnasto td {
+    .app-hinnat td {
       padding: 10px;
     }
-    .hinnasto th {
+    .app-hinnat th {
       padding: 10px;
     }
-    .palvelu:nth-child(odd) {
+    .app-palvelu:nth-child(odd) {
       background-color: #aec4e8
     }
-    .palvelu td:first-child {
+    .app-palvelu td:first-child {
       border-top-left-radius: 3px;
       border-bottom-left-radius: 3px;
     }
-    .palvelu td:last-child {
+    .app-palvelu td:last-child {
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px;
     }
@@ -38,20 +38,20 @@ import { Palvelu, PalvelutService } from './palvelut.service';
   template: `
     <md-card>
       <md-card-title>Hinnasto</md-card-title>
-      <div class="hinnasto">
+      <div class="app-hinnat">
         <table>
           <thead>
             <tr>
-              <th class="vasen">Palvelu</th>
-              <th class="oikea">Kesto</th>
-              <th class="oikea">Hinta</th>
+              <th class="app-vasen">Palvelu</th>
+              <th class="app-oikea">Kesto</th>
+              <th class="app-oikea">Hinta</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let palvelu of palvelut" class="palvelu">
-              <td class="vasen">{{palvelu.nimi}}</td>
-              <td class="oikea">{{palvelu.kesto}} min</td>
-              <td class="oikea">{{palvelu.hinta}}€</td>
+            <tr *ngFor="let palvelu of palvelut" class="app-palvelu">
+              <td class="app-vasen">{{palvelu.nimi}}</td>
+              <td class="app-oikea">{{palvelu.kesto}} min</td>
+              <td class="app-oikea">{{palvelu.hinta}}€</td>
             </tr>
           </tbody>
         </table>
@@ -59,7 +59,7 @@ import { Palvelu, PalvelutService } from './palvelut.service';
     </md-card>
   `
 })
-export class Hinnasto {
+export class Hinnat {
   private palvelut: Array<Palvelu>;
 
   constructor(private service: PalvelutService) {

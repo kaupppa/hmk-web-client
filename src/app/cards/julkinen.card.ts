@@ -4,20 +4,15 @@ import { Info, InfoService } from './info.service';
 @Component({
   selector: 'julkinen',
   providers: [InfoService],
-  styles: [`
-    #avatar {
-      border-radius: 0;
-    }
-  `],
   template: `
     <md-card>
       <md-card-header>
-        <img id="avatar" md-card-avatar src="assets/bussi.png">
+        <img md-card-avatar src="assets/bussi.png">
       </md-card-header>
       <p>
       Katso <a href="{{url}}">reittioppaasta</a> bussi ja metroreitit
       </p>
-      </md-card>
+    </md-card>
   `
 })
 export class Julkinen {

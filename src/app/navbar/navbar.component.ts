@@ -21,9 +21,6 @@ import { Component } from '@angular/core';
       border-radius: 3px;
     }
 
-    .fill{
-      flex: 1 1 auto;
-    }
     md-toolbar.md-navbar {
       background: #8aacde;
       color: #1f57af;
@@ -44,6 +41,16 @@ import { Component } from '@angular/core';
     </md-toolbar>
   `
 })
+/*
+    <md-toolbar color="navbar">
+      <button class="nav-button" [routerLinkActive]="['active-link']"
+        routerLink="/" [routerLinkActiveOptions]="{exact:true}">Etusivu</button>
+      <button class="nav-button" [routerLinkActive]="['active-link']"
+        routerLink="/hinnasto">Hinnasto</button>
+      <button class="nav-button" [routerLinkActive]="['active-link']"
+        routerLink="/saapuminen">Saapuminen</button>
+    </md-toolbar>
+*/
 export class NavBar {
 
 }

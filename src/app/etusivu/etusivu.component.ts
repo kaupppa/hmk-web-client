@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
+import { OutletContainer } from '../outlet-container';
 
 @Component({
   selector: 'etusivu',
+  directives: [OutletContainer],
   template: `
-    <md-content>
+    <outlet-container>
       <esittely></esittely>
       <aukioloaika></aukioloaika>
       <ajanvaraus></ajanvaraus>
       <yhteystiedot></yhteystiedot>
-    </md-content>
+    </outlet-container>
   `
 })
 export class Etusivu {

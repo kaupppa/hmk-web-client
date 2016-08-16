@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MdCardModule } from '@angular2-material/card';
 import { MdButtonModule } from '@angular2-material/button';
 import { MdListModule } from '@angular2-material/list';
-import { Hinnasto } from './hinnasto.card';
+import { Hinnat } from './hinnat.card';
 import { Ajanvaraus } from './ajanvaraus.card';
 import { Yhteystiedot } from './yhteystiedot.card';
 import { Kartta } from './kartta.card';
@@ -16,7 +16,7 @@ import { InfoService } from './info.service';
 import { PalvelutService } from './palvelut.service';
 
 const cards: any[] = [
-  Hinnasto,
+  Hinnat,
   Ajanvaraus,
   Yhteystiedot,
   Kartta,

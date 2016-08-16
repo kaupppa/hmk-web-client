@@ -4,15 +4,10 @@ import { Info, InfoService } from './info.service';
 @Component({
   selector: 'ajanvaraus',
   providers: [InfoService],
-  styles: [`
-    #avatar {
-      border-radius: 0;
-    }
-  `],
   template: `
     <md-card [style.background]="'#aec4e8'">
       <md-card-header>
-        <img id="avatar" md-card-avatar src="assets/puhelin.png">
+        <img md-card-avatar src="assets/puhelin.png">
       </md-card-header>
       <p>Ajanvaraus numerosta {{info.puh}}</p>
     </md-card>

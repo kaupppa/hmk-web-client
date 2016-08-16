@@ -5,10 +5,7 @@ import { Info, InfoService } from './info.service';
   selector: 'yhteystiedot',
   providers: [InfoService],
   styles: [`
-    #avatar {
-      border-radius: 0;
-    }
-    .yhteystieto {
+    .app-yhteystieto {
       font-size: 14px;
       padding: 0;
       margin: 2px;
@@ -17,13 +14,13 @@ import { Info, InfoService } from './info.service';
   template: `
     <md-card>
       <md-card-header>
-        <img id="avatar" md-card-avatar src="assets/kirjekuori.png">
+        <img md-card-avatar src="assets/kirjekuori.png">
       </md-card-header>
-      <p class="yhteystieto">{{info.henkiloNimi}}</p>
-      <p class="yhteystieto">Puh. {{info.puh}}</p>
-      <p class="yhteystieto">{{info.katuosoite}}</p>
-      <p class="yhteystieto">{{info.postiosoite}} {{info.kaupunki}}</p>
-      <p class="yhteystieto">Y-tunnus {{info.tunnus}}</p>
+      <p class="app-yhteystieto">{{info.henkiloNimi}}</p>
+      <p class="app-yhteystieto">Puh. {{info.puh}}</p>
+      <p class="app-yhteystieto">{{info.katuosoite}}</p>
+      <p class="app-yhteystieto">{{info.postiosoite}} {{info.kaupunki}}</p>
+      <p class="app-yhteystieto">Y-tunnus {{info.tunnus}}</p>
     </md-card>
   `
 })

@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
+import { OutletContainer } from '../outlet-container';
 
 @Component({
   selector: 'hinnasto',
+  directives: [OutletContainer],
   template: `
-    <md-content>
-      <hinnasto></hinnasto>
-      <ajanvaraus></ajanvaraus>
+    <outlet-container>
+      <hinnat></hinnat>
       <peruutus></peruutus>
-    </md-content>
+      <ajanvaraus></ajanvaraus>
+    </outlet-container>
   `
 })
 export class Hinnasto {

@@ -7,14 +7,16 @@ declare var L: any;
 @Component({
   selector: 'kartta',
   styles: [`
-    #karttaId {
-      height: 400px;
+    .app-kartta {
+      min-height: 400px;
       min-width: 400px;
+      border-radius: 3px;
     }
   `],
   template: `
     <md-card>
-      <div id="karttaId"></div>
+      <p class="yhteystieto">{{info.katuosoite}}, {{info.postiosoite}} {{info.kaupunki}}</p>
+      <div id="karttaId" class="app-kartta"></div>
     </md-card>
   `
 })
@@ -35,7 +37,7 @@ export class Kartta {
   private createMap() {
     return L.map('karttaId', {
       center: this.info.coord,
-      zoom: 16
+      zoom: 17
     });
   }
 
