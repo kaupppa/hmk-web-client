@@ -9,7 +9,6 @@ const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const CompressionPlugin = require("compression-webpack-plugin");
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 const HOST = process.env.HOST || 'localhost';
@@ -43,16 +42,17 @@ module.exports = webpackMerge(commonConfig, {
     }),
     new UglifyJsPlugin({
       beautify: false,
+      debug: false,
+      minimize: true,
+      sourceMap: false,
       mangle: false,
-      compress: { screw_ie8: true },
-      comments: false
-    }),
-    new CompressionPlugin({
-      asset: "[path].[query].gz",
-      algorithm: "gzip",
-      test: /\.js$|\.html$/,
-      threshold: 10240,
-      minRatio: 0.8
+      output: {
+        comments: false
+      },
+      compressor: {
+        screw_ie8: true,
+        warnings: false
+      }
     })
   ],
 
