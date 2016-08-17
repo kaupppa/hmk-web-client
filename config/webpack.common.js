@@ -96,6 +96,11 @@ module.exports = {
       to: 'robots.txt'
     }]),
 
+    new CopyWebpackPlugin([{
+      from: 'src/assets/sitemap.xml',
+      to: 'sitemap.xml'
+    }]),
+
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       chunksSortMode: 'dependency'
