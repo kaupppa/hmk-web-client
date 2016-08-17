@@ -7,7 +7,7 @@ import { Info, InfoService } from './info.service';
   template: `
     <md-card>
       <md-card-header>
-        <img md-card-avatar src="assets/bussi.png">
+        <img md-card-avatar src={{icon}}>
       </md-card-header>
       <p>
       Katso <a href="{{url}}">reittioppaasta</a> bussi ja metroreitit
@@ -17,6 +17,7 @@ import { Info, InfoService } from './info.service';
 })
 export class Julkinen {
   private url: string;
+  private icon = require("assets/bussi.png");
 
   constructor(private service: InfoService) {
   }

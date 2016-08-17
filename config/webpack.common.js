@@ -65,7 +65,8 @@ module.exports = {
       },
       {
         test: /\.(png)$/,
-        loader: 'file-loader'
+        loader: 'url?limit=25000',
+        query: { mimetype: "image/png" }
       }
     ]
 
@@ -79,11 +80,6 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: ['polyfills', 'vendor'].reverse()
     }),
-
-    new CopyWebpackPlugin([{
-      from: 'src/assets',
-      to: 'assets'
-    }]),
 
     new CopyWebpackPlugin([{
       from: 'node_modules/leaflet/dist/images',

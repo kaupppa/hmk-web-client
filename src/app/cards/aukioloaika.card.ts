@@ -5,11 +5,12 @@ import { Component } from '@angular/core';
   template: `
     <md-card [style.background]="'#aec4e8'">
       <md-card-header>
-        <img md-card-avatar src="assets/kello.png">
+        <img md-card-avatar src={{icon}}>
       </md-card-header>
       <p>Avoinna arkisin sopimuksen mukaan</p>
     </md-card>
   `
 })
 export class Aukioloaika {
+  private icon = require("assets/kello.png");
 }

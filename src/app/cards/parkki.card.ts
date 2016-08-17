@@ -5,11 +5,12 @@ import { Component } from '@angular/core';
   template: `
     <md-card>
       <md-card-header>
-        <img md-card-avatar src="assets/auto.png">
+        <img md-card-avatar src={{icon}}>
       </md-card-header>
       <p>Liikehuoneiston edessä on yksi asiakasparkkipaikka</p>
     </md-card>
   `
 })
 export class Parkki {
+  private icon = require("assets/auto.png");
 }

@@ -7,7 +7,7 @@ import { Info, InfoService } from './info.service';
   template: `
     <md-card [style.background]="'#aec4e8'">
       <md-card-header>
-        <img md-card-avatar src="assets/puhelin.png">
+        <img md-card-avatar src={{icon}}>
       </md-card-header>
       <p>Ajanvaraus numerosta {{info.puh}}</p>
     </md-card>
@@ -15,8 +15,10 @@ import { Info, InfoService } from './info.service';
 })
 export class Ajanvaraus {
   private info: Info;
+  private icon = require("assets/puhelin.png");
 
   constructor(private service: InfoService) {
+
   }
 
   public ngOnInit() {

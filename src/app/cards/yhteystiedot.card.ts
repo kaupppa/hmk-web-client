@@ -14,7 +14,7 @@ import { Info, InfoService } from './info.service';
   template: `
     <md-card>
       <md-card-header>
-        <img md-card-avatar src="assets/kirjekuori.png">
+        <img md-card-avatar src={{icon}}>
       </md-card-header>
       <p class="app-yhteystieto">{{info.henkiloNimi}}</p>
       <p class="app-yhteystieto">Puh. {{info.puh}}</p>
@@ -26,6 +26,7 @@ import { Info, InfoService } from './info.service';
 })
 export class Yhteystiedot {
   private info: Info;
+  private icon = require("assets/kirjekuori.png");
 
   constructor(private service: InfoService) {
   }
