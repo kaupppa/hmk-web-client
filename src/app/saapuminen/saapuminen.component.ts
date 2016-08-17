@@ -21,4 +21,11 @@ import { OutletContainer } from '../outlet-container';
 })
 export class Saapuminen {
 
+  ngOnInit() {
+    try {
+      window.scrollTo(0, 0);
+    } catch (err) {
+      ;
+    }
+  }
 }

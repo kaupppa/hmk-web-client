@@ -13,4 +13,12 @@ import { OutletContainer } from '../outlet-container';
   `
 })
 export class Hinnasto {
+
+  ngOnInit() {
+    try {
+      window.scrollTo(0, 0);
+    } catch (err) {
+      ;
+    }
+  }
 }
