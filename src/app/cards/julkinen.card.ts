@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Info, InfoService } from './info.service';
 
 @Component({
@@ -15,9 +15,9 @@ import { Info, InfoService } from './info.service';
     </md-card>
   `
 })
-export class Julkinen {
+export class Julkinen implements OnInit {
   private url: string;
-  private icon = require("assets/bussi.png");
+  private icon = require('assets/bussi.png');
 
   constructor(private service: InfoService) {
   }

@@ -12,5 +12,5 @@ import { Component } from '@angular/core';
   `
 })
 export class Parkki {
-  private icon = require("assets/auto.png");
+  private icon = require('assets/auto.png');
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Info, InfoService } from './info.service';
 
@@ -20,7 +20,7 @@ declare var L: any;
     </md-card>
   `
 })
-export class Kartta {
+export class Kartta implements OnInit {
   private info: Info;
 
   constructor(private service: InfoService) {

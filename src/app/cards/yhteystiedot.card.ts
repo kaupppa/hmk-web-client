@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Info, InfoService } from './info.service';
 
 @Component({
@@ -24,9 +24,9 @@ import { Info, InfoService } from './info.service';
     </md-card>
   `
 })
-export class Yhteystiedot {
+export class Yhteystiedot implements OnInit {
   private info: Info;
-  private icon = require("assets/kirjekuori.png");
+  private icon = require('assets/kirjekuori.png');
 
   constructor(private service: InfoService) {
   }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Palvelu, PalvelutService } from './palvelut.service';
 
 @Component({
@@ -59,7 +59,7 @@ import { Palvelu, PalvelutService } from './palvelut.service';
     </md-card>
   `
 })
-export class Hinnat {
+export class Hinnat implements OnInit {
   private palvelut: Array<Palvelu>;
 
   constructor(private service: PalvelutService) {
