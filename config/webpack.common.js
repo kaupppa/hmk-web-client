@@ -81,25 +81,27 @@ module.exports = {
       name: ['polyfills', 'vendor'].reverse()
     }),
 
-    new CopyWebpackPlugin([{
-      from: 'node_modules/leaflet/dist/images',
-      to: 'assets/leaflet/images'
-    }]),
-
-    new CopyWebpackPlugin([{
-      from: 'src/assets/favicon.png',
-      to: 'favicon.png'
-    }]),
-
-    new CopyWebpackPlugin([{
-      from: 'src/assets/robots.txt',
-      to: 'robots.txt'
-    }]),
-
-    new CopyWebpackPlugin([{
-      from: 'src/assets/sitemap.xml',
-      to: 'sitemap.xml'
-    }]),
+    new CopyWebpackPlugin([
+      {
+        from: 'node_modules/leaflet/dist/images',
+        to: 'assets/leaflet/images'
+      },
+      {
+        from: 'src/assets/favicon.png',
+        to: 'favicon.png'
+      },
+      {
+        from: 'src/assets/robots.txt',
+        to: 'robots.txt'
+      },
+      {
+        from: 'src/assets/sitemap.xml',
+        to: 'sitemap.xml'
+      }
+    ], {
+        copyUnmodified: true
+      }
+    ),
 
     new HtmlWebpackPlugin({
       template: 'src/index.html',
