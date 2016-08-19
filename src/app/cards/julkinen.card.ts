@@ -6,11 +6,11 @@ import { Info, InfoService } from './info.service';
   providers: [InfoService],
   template: `
     <md-card>
-      <md-card-header>
-        <img md-card-avatar src={{icon}}>
-      </md-card-header>
+      <card-header icon={{icon}}>
+        Bussi ja metro
+      </card-header>
       <p>
-      Katso <a href="{{url}}">reittioppaasta</a> bussi ja metroreitit
+        Katso <a href="{{url}}">reittioppaasta</a> linjat ja aikataulut
       </p>
     </md-card>
   `

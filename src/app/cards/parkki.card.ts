@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'parkki',
   template: `
     <md-card>
-      <md-card-header>
-        <img md-card-avatar src={{icon}}>
-      </md-card-header>
+      <card-header icon={{icon}}>
+        Pysäköinti
+      </card-header>
       <p>Liikehuoneiston edessä on yksi asiakasparkkipaikka</p>
     </md-card>
   `

@@ -13,9 +13,9 @@ import { Info, InfoService } from './info.service';
   `],
   template: `
     <md-card>
-      <md-card-header>
-        <img md-card-avatar src={{icon}}>
-      </md-card-header>
+      <card-header icon={{icon}}>
+        Yhteystiedot
+      </card-header>
       <p class="app-yhteystieto">{{info.henkiloNimi}}</p>
       <p class="app-yhteystieto">Puh. {{info.puh}}</p>
       <p class="app-yhteystieto">{{info.katuosoite}}</p>

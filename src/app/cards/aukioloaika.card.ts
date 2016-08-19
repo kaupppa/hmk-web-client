@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'aukioloaika',
   template: `
     <md-card [style.background]="'#aec4e8'">
-      <md-card-header>
-        <img md-card-avatar src={{icon}}>
-      </md-card-header>
+      <card-header icon={{icon}}>
+        Aukioloajat
+      </card-header>
       <p>Avoinna arkisin sopimuksen mukaan</p>
     </md-card>
   `

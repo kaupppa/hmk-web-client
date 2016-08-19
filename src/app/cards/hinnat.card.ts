@@ -15,13 +15,14 @@ import { Palvelu, PalvelutService } from './palvelut.service';
       text-align: right;
     }
     .app-hinnat table {
-      margin: 20px;
+      margin: 10px 20px 0 20px;
     }
     .app-hinnat td {
-      padding: 10px;
+      padding: 10px 30px 10px 10px;
     }
     .app-hinnat th {
-      padding: 10px;
+      padding: 10px 30px 10px 10px;
+      font-weight: inherit;
     }
     .app-palvelu:nth-child(odd) {
       background-color: #aec4e8
@@ -37,7 +38,9 @@ import { Palvelu, PalvelutService } from './palvelut.service';
   `],
   template: `
     <md-card>
-      <md-card-title>Hinnasto</md-card-title>
+      <card-header icon={{icon}}>
+        Hinnasto
+      </card-header>
       <div class="app-hinnat">
         <table>
           <thead>
@@ -61,6 +64,7 @@ import { Palvelu, PalvelutService } from './palvelut.service';
 })
 export class Hinnat implements OnInit {
   private palvelut: Array<Palvelu>;
+  private icon = require('assets/henkilo.png');
 
   constructor(private service: PalvelutService) {
   }

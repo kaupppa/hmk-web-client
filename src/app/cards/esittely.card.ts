@@ -26,8 +26,8 @@ import { Info, InfoService } from './info.service';
           Teen klassista hierontaa ja intialaista päähierontaa.
           Toimipisteeni sijaitsee Lauttasaaressa keskeisellä paikalla, hyvien kulkuyhteyksien varrella.
         </p>
-        </div>
-        <p><b>Tervetuloa!</b></p>
+      </div>
+      <p><b>Tervetuloa!</b></p>
     </md-card>
   `
 })

@@ -6,9 +6,9 @@ import { Info, InfoService } from './info.service';
   providers: [InfoService],
   template: `
     <md-card [style.background]="'#aec4e8'">
-      <md-card-header>
-        <img md-card-avatar src={{icon}}>
-      </md-card-header>
+      <card-header icon={{icon}}>
+        Ajanvaraus
+      </card-header>
       <p>Ajanvaraus numerosta {{info.puh}}</p>
     </md-card>
   `
