@@ -15,7 +15,9 @@ import '@angular2-material/toolbar';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
+import 'hammerjs';
+
 import 'leaflet/dist/leaflet.js';
 import 'leaflet/dist/leaflet.css';
 declare var L: any;
-L.Icon.Default.imagePath = 'assets/leaflet/images';
+L.Icon.Default.imagePath = 'assets/leaflet/images/';
