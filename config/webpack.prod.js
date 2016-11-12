@@ -17,7 +17,7 @@ const METADATA = webpackMerge(commonConfig.metadata, {
   host: HOST,
   port: PORT,
   ENV: ENV,
-  baseUrl: '/paukau3/'
+  baseUrl: '/'
 });
 module.exports = webpackMerge(commonConfig, {
   metadata: METADATA,
