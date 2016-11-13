@@ -1,33 +1,48 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, Title } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { appRoutingModule } from './app.routing';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdButtonModule } from '@angular2-material/button';
 import { Saapuminen } from './saapuminen';
 import { Etusivu } from './etusivu';
 import { Hinnasto } from './hinnasto';
 import { CardsModule } from './cards';
-import { SeoService } from './common';
+import { InfoService } from './cards/info.service';
+import { OutletContainer } from './outlet-container';
+import { NavBar } from './navbar';
+
+const appRoutes: Routes = [
+    { path: '', component: Etusivu },
+    { path: 'saapuminen', component: Saapuminen },
+    { path: 'hinnasto', component: Hinnasto },
+    { path: '**', component: Etusivu },
+];
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    MdToolbarModule,
-    MdButtonModule,
-    appRoutingModule,
-    CardsModule
+    imports: [
+        BrowserModule,
+        RouterModule.forRoot(appRoutes),
+        MdToolbarModule,
+        MdButtonModule,
+        CardsModule
     ],
-  declarations: [AppComponent, Saapuminen, Etusivu, Hinnasto],
-  providers: [
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy,
-    },
-    SeoService,
-    Title
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        Saapuminen,
+        Etusivu,
+        Hinnasto,
+        OutletContainer,
+        NavBar
+    ],
+    providers: [
+        {
+            provide: LocationStrategy,
+            useClass: HashLocationStrategy,
+        },
+        InfoService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

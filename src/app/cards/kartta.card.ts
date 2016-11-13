@@ -41,13 +41,13 @@ export class Kartta implements OnInit {
     });
   }
 
-  private setLayerMap(map) {
+  private setLayerMap(map: any) {
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
   }
 
-  private createMarker(map) {
+  private createMarker(map: any) {
     let marker = L.marker(this.info.coord).addTo(map);
     marker.bindPopup('<p>' + this.info.nimi + '</p><p>' + this.info.katuosoite + '</p>');
     return marker;

@@ -41,16 +41,6 @@ import { Component } from '@angular/core';
     </md-toolbar>
   `
 })
-/*
-    <md-toolbar color="navbar">
-      <button class="nav-button" [routerLinkActive]="['active-link']"
-        routerLink="/" [routerLinkActiveOptions]="{exact:true}">Etusivu</button>
-      <button class="nav-button" [routerLinkActive]="['active-link']"
-        routerLink="/hinnasto">Hinnasto</button>
-      <button class="nav-button" [routerLinkActive]="['active-link']"
-        routerLink="/saapuminen">Saapuminen</button>
-    </md-toolbar>
-*/
 export class NavBar {
 
 }

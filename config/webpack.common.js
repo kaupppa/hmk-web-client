@@ -8,7 +8,7 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 const METADATA = {
   title: 'Rekisteröity hieroja Minna Kauppinen (ent. Paaso), Lauttasaari',
   description: 'Klassista hierontaa ja intialaista päähierontaa lauttasaaressa, hyvien kulkuyhteyksien varrella.' +
-  ' Osoite Lauttasaarentie 37, 00200 Helsinki'
+  ' Ajanvaraus numerosta 050 5477 811. Osoite Lauttasaarentie 37, 00200 Helsinki'
 };
 
 module.exports = {
@@ -29,14 +29,7 @@ module.exports = {
     preLoaders: [
       {
         test: /\.js$/,
-        loader: 'source-map-loader',
-        exclude: [
-          // these packages have problems with their sourcemaps
-          helpers.root('node_modules/rxjs'),
-          helpers.root('node_modules/@angular'),
-          helpers.root('node_modules/@ngrx'),
-          helpers.root('node_modules/@angular2-material'),
-        ]
+        loader: 'source-map-loader'
       }
     ],
     loaders: [

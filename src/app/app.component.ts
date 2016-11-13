@@ -4,7 +4,6 @@ import { NavBar } from './navbar';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  directives: [ NavBar],
   styleUrls: [
     './app.style.css'
   ],
