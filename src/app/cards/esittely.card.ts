@@ -3,7 +3,6 @@ import { Info, InfoService } from './info.service';
 
 @Component({
   selector: 'esittely',
-  providers: [InfoService],
   styles: [`
     .app-logo-img  {
       float: right;

@@ -3,7 +3,6 @@ import { Info, InfoService } from './info.service';
 
 @Component({
   selector: 'ajanvaraus',
-  providers: [InfoService],
   template: `
     <md-card [style.background]="'#aec4e8'">
       <card-header icon={{icon}}>

@@ -119,3 +119,6 @@ html, body {
 .app-flex-container [md-card-avatar] {
   border-radius: 0;
 }
+.ajanvaraus {
+  background: #aec4e8;
+}

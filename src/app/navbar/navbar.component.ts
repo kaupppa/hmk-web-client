@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
     .nav-button {
       background: transparent;
       cursor: pointer;
-      cursor: hand;
       outline: none;
       border: none;
       font-size: 14px;

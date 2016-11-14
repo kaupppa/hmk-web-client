@@ -3,7 +3,6 @@ import { Palvelu, PalvelutService } from './palvelut.service';
 
 @Component({
   selector: 'hinnat',
-  providers: [PalvelutService],
   styles: [`
     .app-hinnat table {
       border-collapse: collapse;
@@ -24,7 +23,19 @@ import { Palvelu, PalvelutService } from './palvelut.service';
       padding: 10px 30px 10px 10px;
       font-weight: inherit;
     }
-    .app-palvelu:nth-child(odd) {
+    .app-hinnat th:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    .app-hinnat th:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    .app-hinnat th {
+      background-color: #aec4e8
+    }
+
+    .app-palvelu:nth-child(even) {
       background-color: #aec4e8
     }
     .app-palvelu td:first-child {

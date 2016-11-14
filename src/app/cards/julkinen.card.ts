@@ -3,7 +3,6 @@ import { Info, InfoService } from './info.service';
 
 @Component({
   selector: 'julkinen',
-  providers: [InfoService],
   template: `
     <md-card>
       <card-header icon={{icon}}>

@@ -8,7 +8,6 @@ import { Saapuminen } from './saapuminen';
 import { Etusivu } from './etusivu';
 import { Hinnasto } from './hinnasto';
 import { CardsModule } from './cards';
-import { InfoService } from './cards/info.service';
 import { OutletContainer } from './outlet-container';
 import { NavBar } from './navbar';
 
@@ -34,9 +33,6 @@ const appRoutes: Routes = [
         Hinnasto,
         OutletContainer,
         NavBar
-    ],
-    providers: [
-        InfoService
     ],
     bootstrap: [AppComponent]
 })

@@ -27,12 +27,7 @@ const cards: any[] = [
   Julkinen,
   Parkki,
   CardHeader
-  ];
-
-const services: any[] = [
-  InfoService,
-  PalvelutService
-  ];
+];
 
 @NgModule({
   imports: [
@@ -40,9 +35,12 @@ const services: any[] = [
     MdCardModule,
     MdButtonModule,
     MdListModule
-    ],
+  ],
   exports: cards,
   declarations: cards,
-  providers: services
+  providers: [
+    InfoService,
+    PalvelutService
+  ]
 })
 export class CardsModule { }

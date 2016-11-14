@@ -3,7 +3,6 @@ import { Info, InfoService } from './info.service';
 
 @Component({
   selector: 'yhteystiedot',
-  providers: [InfoService],
   styles: [`
     .app-yhteystieto {
       font-size: 14px;
