@@ -5,21 +5,17 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>
-    <%= webpackConfig.metadata.title %>
-  </title>
-
-  <meta name="description" content="<%= webpackConfig.metadata.description %>">
-
   <!-- base url -->
   <base href="<%= webpackConfig.metadata.baseUrl %>">
   <link rel="icon" href="favicon.png">
 
+  <title>
+    <%= webpackConfig.metadata.title %>
+  </title>
+  <meta name="description" content="<%= webpackConfig.metadata.description %>">
 </head>
 
 <body style="background-color:#e4eff9;">
-
   <app class="app">
     Ladataan ...
   </app>
@@ -28,7 +24,5 @@
     <!-- Webpack Dev Server reload -->
     <script src="/webpack-dev-server.js"></script>
   <% } %>
-
 </body>
-
 </html>
