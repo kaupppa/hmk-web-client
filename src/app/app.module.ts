@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MdToolbarModule } from '@angular2-material/toolbar';
@@ -36,10 +35,6 @@ const appRoutes: Routes = [
     NavBar
   ],
   providers: [
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy,
-    },
     Title
   ],
   bootstrap: [AppComponent]
