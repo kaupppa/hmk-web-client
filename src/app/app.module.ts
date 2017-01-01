@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -40,6 +40,7 @@ const appRoutes: Routes = [
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
     },
+    Title
   ],
   bootstrap: [AppComponent]
 })
