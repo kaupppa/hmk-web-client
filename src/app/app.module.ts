@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MdToolbarModule } from '@angular2-material/toolbar';
@@ -12,28 +13,34 @@ import { OutletContainer } from './outlet-container';
 import { NavBar } from './navbar';
 
 const appRoutes: Routes = [
-    { path: '', component: Etusivu },
-    { path: 'saapuminen', component: Saapuminen },
-    { path: 'hinnasto', component: Hinnasto },
-    { path: '**', component: Etusivu },
+  { path: '', component: Etusivu },
+  { path: 'saapuminen', component: Saapuminen },
+  { path: 'hinnasto', component: Hinnasto },
+  { path: '**', component: Etusivu },
 ];
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        RouterModule.forRoot(appRoutes),
-        MdToolbarModule,
-        MdButtonModule,
-        CardsModule
-    ],
-    declarations: [
-        AppComponent,
-        Saapuminen,
-        Etusivu,
-        Hinnasto,
-        OutletContainer,
-        NavBar
-    ],
-    bootstrap: [AppComponent]
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    MdToolbarModule,
+    MdButtonModule,
+    CardsModule
+  ],
+  declarations: [
+    AppComponent,
+    Saapuminen,
+    Etusivu,
+    Hinnasto,
+    OutletContainer,
+    NavBar
+  ],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy,
+    },
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
