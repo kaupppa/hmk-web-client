@@ -5,11 +5,11 @@
         <changefreq>monthly</changefreq>
     </url>
     <url>
-        <loc>http://www.hieroja-minnakauppinen.fi/hinnasto</loc>
+        <loc>http://www.hieroja-minnakauppinen.fi/hinnasto.html</loc>
         <changefreq>monthly</changefreq>
     </url>
     <url>
-        <loc>http://www.hieroja-minnakauppinen.fi/saapuminen</loc>
+        <loc>http://www.hieroja-minnakauppinen.fi/saapuminen.html</loc>
         <changefreq>monthly</changefreq>
     </url>
 </urlset>
