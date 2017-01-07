@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- base url -->
   <base href="<%= webpackConfig.metadata.baseUrl %>">
-  <link rel="icon" href="favicon.png">
+  <link rel="icon" href="/favicon.png">
 
   <title>
     <%= webpackConfig.metadata.title %>
@@ -16,6 +16,21 @@
 </head>
 
 <body style="background-color:#e4eff9;">
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "http://www.hieroja-minnakauppinen.fi",
+    "contactPoint": [
+      { "@type": "ContactPoint",
+        "telephone": "+358 50 5477 811",
+        "contactType": "reservations",
+        "availableLanguage": ["Finnish","English"],
+        "areaServed": "FI"
+      }
+    ]
+  }
+  </script>
   <app class="app">
     Ladataan ...
   </app>

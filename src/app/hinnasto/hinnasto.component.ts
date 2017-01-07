@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Info, InfoService } from '../cards/info.service';
-import { Title } from '@angular/platform-browser';
+import { MetaService } from 'ng2-meta';
+import { Palvelu, PalvelutService } from '../cards/palvelut.service';
 
 @Component({
   selector: 'hinnasto',
@@ -14,13 +14,14 @@ import { Title } from '@angular/platform-browser';
 })
 export class Hinnasto implements OnInit {
 
-  constructor(private infoservice: InfoService, private titleService: Title) {
+  constructor(private metaService: MetaService, private palvelutService: PalvelutService) {
   }
 
   ngOnInit() {
-    let info = this.infoservice.get();
-    let parts = this.titleService.getTitle().split(' - ', 2);
-    this.titleService.setTitle('Hinnasto - ' + parts[parts.length - 1]);
+    let palvelut = this.palvelutService.get();
+    let description = 'Hierontahinnat alkaen ' + palvelut[0].hinta + '€ - ' + palvelut[0].kesto + 'min.'
+    + ' Ajanvaraus numerosta 050 5477 811.';
+    this.metaService.setTag('description', description);
     window.scrollTo(0, 0);
   }
 }

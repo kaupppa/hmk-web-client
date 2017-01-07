@@ -18,6 +18,7 @@ import { Component } from '@angular/core';
       line-height: 36px;
       padding: 0 16px;
       border-radius: 3px;
+      text-decoration: none;
     }
 
     md-toolbar.md-navbar {
@@ -31,12 +32,12 @@ import { Component } from '@angular/core';
   `],
   template: `
     <md-toolbar color="navbar">
-      <button class="nav-button" [routerLinkActive]="['active-link']"
-        routerLink="/" [routerLinkActiveOptions]="{exact:true}">Etusivu</button>
-      <button class="nav-button" [routerLinkActive]="['active-link']"
-        routerLink="/hinnasto">Hinnasto</button>
-      <button class="nav-button" [routerLinkActive]="['active-link']"
-        routerLink="/saapuminen">Saapuminen</button>
+      <a class="nav-button" [routerLinkActive]="['active-link']"
+        routerLink="/" [routerLinkActiveOptions]="{exact:true}">Etusivu</a>
+      <a class="nav-button" [routerLinkActive]="['active-link']"
+        routerLink="/hinnasto">Hinnasto</a>
+      <a class="nav-button" [routerLinkActive]="['active-link']"
+        routerLink="/saapuminen">Saapuminen</a>
     </md-toolbar>
   `
 })
