@@ -62,9 +62,7 @@ module.exports = {
         query: { mimetype: "image/png" }
       }
     ]
-
   },
-
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(true),
 
@@ -97,8 +95,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       chunksSortMode: 'dependency'
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      filename: 'hinnasto/index.html',
+      chunksSortMode: 'dependency'
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      filename: 'saapuminen/index.html',
+      chunksSortMode: 'dependency'
     })
-
   ],
 
   node: {
