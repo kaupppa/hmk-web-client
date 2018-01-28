@@ -37,7 +37,9 @@ export class Kartta implements OnInit {
   private createMap() {
     return L.map('karttaId', {
       center: this.info.coord,
-      zoom: 17
+      zoom: 17,
+      dragging: false,
+      tap: false
     });
   }
 
