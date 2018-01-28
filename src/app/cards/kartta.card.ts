@@ -14,10 +14,10 @@ declare var L: any;
     }
   `],
   template: `
-    <md-card>
+    <mat-card>
       <p class="yhteystieto">{{info.katuosoite}}, {{info.postiosoite}} {{info.kaupunki}}</p>
       <div id="karttaId" class="app-kartta"></div>
-    </md-card>
+    </mat-card>
   `
 })
 export class Kartta implements OnInit {

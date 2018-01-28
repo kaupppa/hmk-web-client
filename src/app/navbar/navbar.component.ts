@@ -21,7 +21,7 @@ import { Component } from '@angular/core';
       text-decoration: none;
     }
 
-    md-toolbar.md-navbar {
+    mat-toolbar.mat-navbar {
       background: #8aacde;
       color: #1f57af;
     }
@@ -31,14 +31,14 @@ import { Component } from '@angular/core';
     }
   `],
   template: `
-    <md-toolbar color="navbar">
+    <mat-toolbar color="navbar">
       <a class="nav-button" [routerLinkActive]="['active-link']"
         routerLink="/" [routerLinkActiveOptions]="{exact:true}">Etusivu</a>
       <a class="nav-button" [routerLinkActive]="['active-link']"
         routerLink="/hinnasto">Hinnasto</a>
       <a class="nav-button" [routerLinkActive]="['active-link']"
         routerLink="/saapuminen">Saapuminen</a>
-    </md-toolbar>
+    </mat-toolbar>
   `
 })
 export class NavBar {

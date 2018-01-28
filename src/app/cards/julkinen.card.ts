@@ -4,14 +4,14 @@ import { Info, InfoService } from './info.service';
 @Component({
   selector: 'julkinen',
   template: `
-    <md-card>
+    <mat-card>
       <card-header icon={{icon}}>
         Bussi ja metro
       </card-header>
       <p>
         Katso <a href="{{url}}">reittioppaasta</a> linjat ja aikataulut
       </p>
-    </md-card>
+    </mat-card>
   `
 })
 export class Julkinen implements OnInit {

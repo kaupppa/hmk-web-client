@@ -11,7 +11,7 @@ import { Info, InfoService } from './info.service';
     }
   `],
   template: `
-    <md-card>
+    <mat-card>
       <card-header icon={{icon}}>
         Yhteystiedot
       </card-header>
@@ -20,7 +20,7 @@ import { Info, InfoService } from './info.service';
       <p class="app-yhteystieto">{{info.katuosoite}}</p>
       <p class="app-yhteystieto">{{info.postiosoite}} {{info.kaupunki}}</p>
       <p class="app-yhteystieto">Y-tunnus {{info.tunnus}}</p>
-    </md-card>
+    </mat-card>
   `
 })
 export class Yhteystiedot implements OnInit {

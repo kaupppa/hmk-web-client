@@ -4,12 +4,12 @@ import { Info, InfoService } from './info.service';
 @Component({
   selector: 'ajanvaraus',
   template: `
-    <md-card [style.background]="'#aec4e8'">
+    <mat-card [style.background]="'#aec4e8'">
       <card-header icon={{icon}}>
         Ajanvaraus
       </card-header>
       <p>Ajanvaraus numerosta {{info.puh}}</p>
-    </md-card>
+    </mat-card>
   `
 })
 export class Ajanvaraus implements OnInit {

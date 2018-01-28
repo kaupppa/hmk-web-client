@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { MetaService } from 'ng2-meta';
 import { NavBar } from './navbar';
 
 @Component({
@@ -14,6 +13,4 @@ import { NavBar } from './navbar';
   `
 })
 export class AppComponent {
-  constructor(private metaService: MetaService) {}
 }
-

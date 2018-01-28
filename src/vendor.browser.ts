@@ -1,14 +1,14 @@
-import '@angular/platform-browser';
-import '@angular/platform-browser-dynamic';
-import '@angular/core';
-import '@angular/common';
-import '@angular/http';
-import '@angular/router';
+//import '@angular/platform-browser';
+//import '@angular/platform-browser-dynamic';
+//import '@angular/core';
+//import '@angular/common';
+//import '@angular/http';
+//import '@angular/router';
 
-import '@angular2-material/button';
-import '@angular2-material/card';
-import '@angular2-material/list';
-import '@angular2-material/toolbar';
+//import '@angular/material/button';
+//import '@angular/material/card';
+//import '@angular/material/list';
+//import '@angular/material/toolbar';
 
 // RxJS
 import 'rxjs';

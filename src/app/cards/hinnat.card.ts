@@ -48,7 +48,7 @@ import { Palvelu, PalvelutService } from './palvelut.service';
     }
   `],
   template: `
-    <md-card>
+    <mat-card>
       <card-header icon={{icon}}>
         Hinnasto
       </card-header>
@@ -70,7 +70,7 @@ import { Palvelu, PalvelutService } from './palvelut.service';
           </tbody>
         </table>
       </div>
-    </md-card>
+    </mat-card>
   `
 })
 export class Hinnat implements OnInit {

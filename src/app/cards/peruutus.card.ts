@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'peruutus',
   template: `
-    <md-card>
+    <mat-card>
       <card-header icon={{icon}}>
         Esteen sattuessa muistathan perua aikasi
       </card-header>
       <p>Perumattomasta ajasta veloitetaan normaalihinta</p>
-    </md-card>
+    </mat-card>
   `
 })
 export class Peruutus {

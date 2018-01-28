@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MdCardModule } from '@angular2-material/card';
-import { MdButtonModule } from '@angular2-material/button';
-import { MdListModule } from '@angular2-material/list';
+import { MatCardModule,MatButtonModule } from '@angular/material';
+import { MatListModule } from '@angular/material/list';
 import { Hinnat } from './hinnat.card';
 import { Ajanvaraus } from './ajanvaraus.card';
 import { Yhteystiedot } from './yhteystiedot.card';
@@ -32,9 +31,9 @@ const cards: any[] = [
 @NgModule({
   imports: [
     BrowserModule,
-    MdCardModule,
-    MdButtonModule,
-    MdListModule
+    MatCardModule,
+    MatButtonModule,
+    MatListModule
   ],
   exports: cards,
   declarations: cards,

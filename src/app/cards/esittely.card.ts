@@ -16,8 +16,8 @@ import { Info, InfoService } from './info.service';
     }
   `],
   template: `
-    <md-card>
-      <md-card-title>{{info.nimi}}</md-card-title>
+    <mat-card>
+      <mat-card-title>{{info.nimi}}</mat-card-title>
       <div class="app-esittely-text">
         <p>
           <a href="http://www.khl.fi/"><img class="app-logo-img" src={{logo}} alt="http://www.khl.fi"></a>
@@ -27,7 +27,7 @@ import { Info, InfoService } from './info.service';
         </p>
       </div>
       <p><b>Tervetuloa!</b></p>
-    </md-card>
+    </mat-card>
   `
 })
 export class Esittely implements OnInit {

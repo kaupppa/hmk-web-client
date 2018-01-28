@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'parkki',
   template: `
-    <md-card>
+    <mat-card>
       <card-header icon={{icon}}>
         Pysäköinti
       </card-header>
       <p>Liikehuoneiston edessä on yksi asiakasparkkipaikka</p>
       <p>Ajo-ohjeet <a href={{mapUrl}}>Googlen reittihausta.</a></p>
-    </md-card>
+    </mat-card>
   `
 })
 export class Parkki {
