@@ -9,7 +9,7 @@ declare var L: any;
   styles: [`
     .app-kartta {
       min-height: 400px;
-      min-width: 400px;
+      min-width: 250px;
       border-radius: 3px;
     }
   `],

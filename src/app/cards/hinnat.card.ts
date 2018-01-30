@@ -53,7 +53,7 @@ import { Palvelu, PalvelutService } from './palvelut.service';
         Hinnasto
       </card-header>
       <div class="app-hinnat">
-        <table>
+        <table id="app-hinnat-table">
           <thead>
             <tr>
               <th class="app-vasen">Palvelu</th>

@@ -71,7 +71,7 @@ module.exports = {
       helpers.root('src'), // location of your src
     ),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfills']
+      names: ['main', 'vendor', 'polyfills']
     }),
 
     new CopyWebpackPlugin([
