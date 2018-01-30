@@ -6,22 +6,19 @@ const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
-const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const webpack = require('webpack');
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
-const METADATA = webpackMerge(commonConfig.metadata, {
+const METADATA = {
   host: HOST,
   port: PORT,
-  ENV: ENV,
-  baseUrl: '/'
-});
+  ENV: ENV
+};
 module.exports = webpackMerge(commonConfig, {
-  metadata: METADATA,
-  debug: false,
   devtool: 'source-map',
   output: {
     path: helpers.root('dist'),
@@ -31,8 +28,17 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      tslint: {
+        emitErrors: true,
+        failOnHint: true,
+        resourcePath: 'src'
+      },
+      htmlLoader: {
+        minimize: false
+      }
+    }),
     new WebpackMd5Hash(),
-    new DedupePlugin(),
     new DefinePlugin({
       'ENV': JSON.stringify(METADATA.ENV),
       'process.env': {
@@ -56,13 +62,4 @@ module.exports = webpackMerge(commonConfig, {
     })
   ],
 
-  tslint: {
-    emitErrors: true,
-    failOnHint: true,
-    resourcePath: 'src'
-  },
-
-  htmlLoader: {
-    minimize: false
-  }
 });

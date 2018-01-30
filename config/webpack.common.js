@@ -1,18 +1,12 @@
 const webpack = require('webpack');
 const helpers = require('./helpers');
+var path = require('path');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 
-const METADATA = {
-  title: 'Rekisteröity hieroja Minna Kauppinen (ent. Paaso), Lauttasaari',
-  description: 'Klassista hierontaa ja intialaista päähierontaa lauttasaaressa, hyvien kulkuyhteyksien varrella.' +
-  ' Ajanvaraus numerosta 050 5477 811. Osoite Lauttasaarentie 37, 00200 Helsinki'
-};
-
 module.exports = {
-  metadata: METADATA,
   entry: {
     'polyfills': './src/polyfills.browser.ts',
     'vendor': './src/vendor.browser.ts',
@@ -20,22 +14,25 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.ts', '.js', '.json'],
-    root: helpers.root('src'),
-    modulesDirectories: ['node_modules'],
+    extensions: ['.ts', '.js', '.json'],
+    modules: [helpers.root('src'), 'node_modules']
   },
 
   module: {
-    preLoaders: [
+    rules: [
       {
         test: /\.js$/,
+        enforce: "pre",
         loader: 'source-map-loader'
-      }
-    ],
-    loaders: [
+      },
       {
         test: /\.ts$/,
-        loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
+        loader: 'awesome-typescript-loader',
+        exclude: [/\.(spec|e2e)\.ts$/]
+      },
+      {
+        test: /\.ts$/,
+        loader: 'angular2-template-loader',
         exclude: [/\.(spec|e2e)\.ts$/]
       },
       {
@@ -48,7 +45,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['to-string-loader', 'css-loader'],
+        loaders: 'to-string-loader',
+        exclude: /\leaflet.css$/
+      },
+      {
+        test: /\.css$/,
+        loaders: 'css-loader',
         exclude: /\leaflet.css$/
       },
       {
@@ -58,16 +60,18 @@ module.exports = {
       },
       {
         test: /\.(png)$/,
-        loader: 'url?limit=25000',
+        loader: 'url-loader?limit=25000',
         query: { mimetype: "image/png" }
       }
     ]
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(true),
-
+    new webpack.ContextReplacementPlugin(
+      /\@angular(\\|\/)core(\\|\/)esm5/,
+      helpers.root('src'), // location of your src
+    ),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['polyfills', 'vendor'].reverse()
+      name: ['app', 'vendor', 'polyfills']
     }),
 
     new CopyWebpackPlugin([
@@ -109,7 +113,7 @@ module.exports = {
   ],
 
   node: {
-    global: 'window',
+    global: true,
     crypto: 'empty',
     module: false,
     clearImmediate: false,
