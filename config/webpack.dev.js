@@ -12,9 +12,8 @@ const METADATA = {
   ENV: ENV
 };
 module.exports = webpackMerge(commonConfig, {
-
-  devtool: 'cheap-module-source-map',
-
+  mode: 'development',
+  
   output: {
     path: helpers.root('dist'),
     filename: '[name].bundle.js',

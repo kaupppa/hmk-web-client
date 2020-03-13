@@ -6,7 +6,6 @@ const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
-const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const webpack = require('webpack');
 
@@ -20,6 +19,7 @@ const METADATA = {
 };
 module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
+  mode: 'production',
   output: {
     path: helpers.root('dist'),
     filename: '[name].[chunkhash].bundle.js',
@@ -44,20 +44,6 @@ module.exports = webpackMerge(commonConfig, {
       'process.env': {
         'ENV': JSON.stringify(METADATA.ENV),
         'NODE_ENV': JSON.stringify(METADATA.ENV)
-      }
-    }),
-    new UglifyJsPlugin({
-      beautify: false,
-      debug: false,
-      minimize: true,
-      sourceMap: false,
-      mangle: false,
-      output: {
-        comments: false
-      },
-      compressor: {
-        screw_ie8: true,
-        warnings: false
       }
     })
   ],

@@ -16,14 +16,14 @@ import { Info, InfoService } from './info.service';
 })
 export class Julkinen implements OnInit {
   private url: string;
-  private icon = require('assets/bussi.png');
+  private icon = 'assets/bussi.png';
 
   constructor(private service: InfoService) {
   }
 
   public ngOnInit() {
     let info = this.service.get();
-    let url = 'http://www.reittiopas.fi/?to=' + info.katuosoite + ',' + info.kaupunki;
+    let url = 'https://www.reittiopas.fi/?to=' + info.katuosoite + ',' + info.kaupunki;
     this.url = encodeURI(url);
   }
 

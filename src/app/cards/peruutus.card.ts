@@ -12,5 +12,5 @@ import { Component } from '@angular/core';
   `
 })
 export class Peruutus {
-  private icon = require('assets/varoitus.png');
+  private icon = 'assets/varoitus.png';
 }

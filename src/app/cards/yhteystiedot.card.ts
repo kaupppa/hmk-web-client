@@ -25,7 +25,7 @@ import { Info, InfoService } from './info.service';
 })
 export class Yhteystiedot implements OnInit {
   private info: Info;
-  private icon = require('assets/kirjekuori.png');
+  private icon = 'assets/kirjekuori.png';
 
   constructor(private service: InfoService) {
   }

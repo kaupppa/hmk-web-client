@@ -12,5 +12,5 @@ import { Component } from '@angular/core';
   `
 })
 export class Aukioloaika {
-  private icon = require('assets/kello.png');
+  private icon = 'assets/kello.png';
 }

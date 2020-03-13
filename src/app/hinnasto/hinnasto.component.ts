@@ -20,7 +20,6 @@ export class Hinnasto implements OnInit {
     let description = 'Hierontahinnat alkaen ' + palvelut[0].hinta + '€ - ' + palvelut[0].kesto + 'min.'
     + ' Ajanvaraus numerosta 050 5477 811.';
     this.meta.updateTag({ name: 'description', content: description });
-    
 }
   ngOnInit() {
     window.scrollTo(0, 0);

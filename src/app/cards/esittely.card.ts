@@ -20,7 +20,7 @@ import { Info, InfoService } from './info.service';
       <mat-card-title>{{info.nimi}}</mat-card-title>
       <div class="app-esittely-text">
         <p>
-          <a href="http://www.khl.fi/"><img class="app-logo-img" src={{logo}} alt="http://www.khl.fi"></a>
+          <a href="https://www.khl.fi/"><img class="app-logo-img" src={{logo}} alt="http://www.khl.fi"></a>
           Olen valmistunut hierojaksi vuonna 1993 ja olen siitä lähtien toiminut hierojana omalla toiminimellä.
           Teen klassista hierontaa ja intialaista päähierontaa.
           Toimipisteeni sijaitsee Lauttasaaressa keskeisellä paikalla, hyvien kulkuyhteyksien varrella.
@@ -32,7 +32,7 @@ import { Info, InfoService } from './info.service';
 })
 export class Esittely implements OnInit {
   private info: Info;
-  private logo = require('assets/khl-logo.png');
+  private logo = 'assets/khl-logo.png';
 
   constructor(private service: InfoService) {
   }

@@ -1,4 +1,4 @@
 # robotstxt.org
 
 User-agent: *
-Sitemap: http://www.hieroja-minnakauppinen.fi/sitemap.xml
+Sitemap: https://www.hieroja-minnakauppinen.fi/sitemap.xml

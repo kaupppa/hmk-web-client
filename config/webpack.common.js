@@ -67,14 +67,16 @@ module.exports = {
   },
   plugins: [
     new webpack.ContextReplacementPlugin(
-      /\@angular(\\|\/)core(\\|\/)esm5/,
-      helpers.root('src'), // location of your src
+      /\@angular(\\|\/)core(\\|\/)fesm5/,
+      helpers.root('./src'),
+      {}
     ),
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['main', 'vendor', 'polyfills']
-    }),
 
     new CopyWebpackPlugin([
+      {
+        from: 'src/assets',
+        to: 'assets'
+      },
       {
         from: 'node_modules/leaflet/dist/images',
         to: 'assets/leaflet/images'

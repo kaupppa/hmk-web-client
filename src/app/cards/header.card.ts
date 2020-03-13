@@ -3,23 +3,22 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'card-header',
   styles: [`
-    .app-header-icon-img  {
-      width: 40px;
-      height: 40px;
-      margin: 0 10px 0 0;
-    }
     .app-header-container {
       display: flex;
-      align-items: center
+      align-items: center;
+      text-align: center;
     }
+    .app-header-title {
+      height: 100%;
+      text-align: center;
+    }
+    
   `],
   template: `
-    <div class="app-header-container">
-      <img class="app-header-icon-img" src={{icon}}>
-      <b>
-        <ng-content></ng-content>
-      </b>
-    </div>
+    <mat-card-header class="app-header-container">
+      <img mat-card-avatar src="{{icon}}">
+      <mat-card-title  ><ng-content></ng-content></mat-card-title>
+    </mat-card-header>
   `
 })
 export class CardHeader {

@@ -75,7 +75,7 @@ import { Palvelu, PalvelutService } from './palvelut.service';
 })
 export class Hinnat implements OnInit {
   private palvelut: Array<Palvelu>;
-  private icon = require('assets/henkilo.png');
+  private icon = 'assets/henkilo.png';
 
   constructor(private service: PalvelutService) {
   }
