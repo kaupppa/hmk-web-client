@@ -24,6 +24,8 @@ Application is avalable at [http://localhost:3000](http://localhost:3000).
 
 - *npm run server:prod*
 
+- Copy manually all three index.html from browser (seo fix) 
+
 Application is avalable at [http://localhost:8080](http://localhost:8080).
 
 # Test
