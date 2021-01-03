@@ -17,7 +17,7 @@ import { Info, InfoService } from './info.service';
   `],
   template: `
     <mat-card>
-      <mat-card-title>{{info.nimi}}</mat-card-title>
+      <mat-card-title><a href="https://www.khl.fi/">{{info.nimi}}</a></mat-card-title>
       <div class="app-esittely-text">
         <p>
           <a href="https://www.khl.fi/"><img class="app-logo-img" src={{logo}} alt="http://www.khl.fi"></a>

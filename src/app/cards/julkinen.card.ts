@@ -23,7 +23,7 @@ export class Julkinen implements OnInit {
 
   public ngOnInit() {
     let info = this.service.get();
-    let url = 'https://www.reittiopas.fi/?to=' + info.katuosoite + ',' + info.kaupunki;
+    let url = 'https://reittiopas.hsl.fi/?to=' + info.katuosoite + ',' + info.kaupunki;
     this.url = encodeURI(url);
   }
 

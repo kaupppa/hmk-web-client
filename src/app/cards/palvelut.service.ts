@@ -12,12 +12,12 @@ export class Palvelu {
 @Injectable()
 export class PalvelutService {
   private palvelut = [
-    new Palvelu('Klassinen hieronta', '30', 34),
-    new Palvelu('Klassinen hieronta', '45', 41),
-    new Palvelu('Klassinen hieronta', '60', 48),
-    new Palvelu('Klassinen hieronta', '75', 56),
-    new Palvelu('Klassinen hieronta', '90', 66),
-    new Palvelu('Initialainen päähieronta', 'noin 35', 41)
+    new Palvelu('Klassinen hieronta', '30', 35),
+    new Palvelu('Klassinen hieronta', '45', 43),
+    new Palvelu('Klassinen hieronta', '60', 50),
+    new Palvelu('Klassinen hieronta', '75', 58),
+    new Palvelu('Klassinen hieronta', '90', 68),
+    new Palvelu('Initialainen päähieronta', 'noin 35', 43)
   ];
 
   public get(): Array<Palvelu> {
