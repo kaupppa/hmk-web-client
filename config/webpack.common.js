@@ -104,12 +104,12 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      filename: 'hinnasto.html',
+      filename: 'hinnasto/index.html',
       chunksSortMode: 'dependency'
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      filename: 'saapuminen.html',
+      filename: 'saapuminen/index.html',
       chunksSortMode: 'dependency'
     })
   ],
