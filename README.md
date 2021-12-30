@@ -1,34 +1,42 @@
-# An angular2 + webpack WEB client
 
-## Images
+# Quick start
 
-Most of images are from [openclipart](https://openclipart.org/).
+1.  **Install packages.**
 
-# Dev + build
+    ```shell
+    npm install
+    ```
 
-## Install npm
-*npm install*
+2.  **Start developing.**
 
-## Run in dev mode
-*npm start*
+    ```shell
+    npm run develop
+    ```
 
-Same as 
+    Site is now running at http://localhost:8000
 
-*npm run server:dev*
+3.  **Clean.**
 
-Application is avalable at [http://localhost:3000](http://localhost:3000).
+    ```shell
+    npm run clean
+    ```
 
-## Run in production mode
+4.  **Test production.**
 
-- *npm run build:prod*
+    ```shell
+    npm run clean && npm run build && npm run serve
+    ```
 
-- *npm run server:prod*
+    Site is now running at http://localhost:9000
 
-- Copy manually all three index.html from browser (seo fix) 
+## Hints
 
-Application is avalable at [http://localhost:8080](http://localhost:8080).
+    See useState, useEffect, useCallback and other hooks
 
-# Test
+    For temp debugging, use:
 
-## TS lint
-*npm run lint*
+    ```
+    if (typeof window !== 'undefined') {
+        console.log("My debug data");
+    }
+    ```
