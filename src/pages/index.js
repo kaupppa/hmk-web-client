@@ -11,7 +11,7 @@ import Kehut from '../components/kehut';
 import getInfo from '../service/Info-service';
 
 export default function Etusivu() {
-  const theme = ThemeBuilder('#c5e1a5', '#eeeeee')
+  const theme = ThemeBuilder('#c8e6c9', '#eeeeee')
   const title = "Hieroja Minna Kauppinen"
   const description = "Klassista hierontaa ja intialaista päähierontaa lauttasaaressa. Ajanvaraus numerosta 050 5477 811"
   const info = getInfo()

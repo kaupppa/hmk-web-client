@@ -10,7 +10,7 @@ import ThemeBuilder from "../gatsby-theme-material-ui-top-layout/themeBuilder"
 import getInfo from '../service/Info-service';
 
 export default function Saapuminen() {
-  const theme = ThemeBuilder('#ffab91', '#eeeeee')
+  const theme = ThemeBuilder('#ffe0b2', '#eeeeee')
   const title = "Saapuminen - Hieroja Minna Kauppinen"
   const info = getInfo()
   const description = "Hyvien kulkuyhteyksien varrella, bussilla, metrolla tai autolla, osoite " + info.katuosoite + ", " + info.kaupunki

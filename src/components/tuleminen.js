@@ -14,7 +14,7 @@ export default function Tuleminen() {
                 </Box>
                 <Box>
                     <Typography>
-                        Tulet sitten julkisella tai omalla autolla niin helppo on tulla.
+                        Bussipysäkki on kohdalla, metro on lähellä ja parkkipaikka on edessä.
                     </Typography>
                 </Box>
             </CardContent>

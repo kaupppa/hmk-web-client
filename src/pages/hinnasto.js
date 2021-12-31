@@ -10,7 +10,7 @@ import get from '../service/palvelu';
 import getInfo from '../service/Info-service';
 
 export default function Hinnasto() {
-  const theme = ThemeBuilder('#ffe082', '#eeeeee')
+  const theme = ThemeBuilder('#b2dfdb', '#eeeeee')
   const hinnat = get()
   const info = getInfo()
   const title = "Hinnasto - Hieroja Minna Kauppinen"
