@@ -9,7 +9,8 @@ export default function Kehut() {
         <MyCard >
             <CardContent>
                 <Typography sx={{
-                    fontStyle: "italic"
+                    fontStyle: "italic",
+                    fontWeight: 600
                 }}>
                     Paras hieroja ikinä!
                 </Typography>

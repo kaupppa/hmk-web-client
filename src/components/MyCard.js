@@ -6,7 +6,7 @@ const MyCard = ({ children }) => {
         <React.Fragment>
             <Card sx={{
                 width: { xs: '100%', md: 'inherit' },
-                maxWidth: { xs: 'inherit', md: '500px', lg: '800px' },
+                maxWidth: { xs: 'inherit', sm: 'inherit', md: '500px', lg: '800px' },
             }}>
                 {children}
             </Card>

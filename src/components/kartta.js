@@ -18,7 +18,7 @@ export default function Kartta() {
           {title}
         </Typography>
         <CardMedia sx={{
-          margin: '16px'
+          margin: { xs: '4px', sm: '8px', md: '16px', lg: '32px' }
         }}>
           {typeof window !== 'undefined' &&
             // Only in client side

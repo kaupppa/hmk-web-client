@@ -34,7 +34,7 @@ export default function Hinnat() {
     <MyCard >
       <CardContent>
         <Box sx={{
-          marginBottom: "16px"
+          marginBottom: '16px'
         }}>
           <Typography variant="h1">
             Hinnasto

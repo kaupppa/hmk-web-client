@@ -32,11 +32,17 @@ const ThemeBuilder = function (primary, secondary) {
     // See https://material.io/resources/color
     let theme = createTheme({
         palette: palette,
-        /*  
-          breakpoints: {
-            values: { xs: 0, sm: 400, md: 700, lg: 1200, xl: 1536 }
-          },
-          */
+        /*
+        breakpoints: {
+            values: {
+                xs: 0,
+                sm: 600,
+                md: 900,
+                lg: 1200,
+                xl: 1536
+            }
+        },
+        */
         typography: typography
     });
 

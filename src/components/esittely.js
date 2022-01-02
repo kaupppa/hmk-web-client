@@ -9,11 +9,9 @@ export default function Esittely() {
   const info = getInfo()
   return (
     <MyCard >
-      <CardContent sx={{
-        maxWidth: "600px"
-      }} >
+      <CardContent >
         <Box sx={{
-          marginBottom: "16px"
+          marginBottom: '16px'
         }}>
           <Typography variant="h1">
             {info.nimi}

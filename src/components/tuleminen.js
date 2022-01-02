@@ -7,7 +7,9 @@ export default function Tuleminen() {
     return (
         <MyCard >
             <CardContent >
-                <Box >
+                <Box sx={{
+                    marginBottom: '16px'
+                }}>
                     <Typography variant="h1">
                         Saapuminen
                     </Typography>

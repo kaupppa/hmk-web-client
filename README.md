@@ -10,7 +10,7 @@
 2.  **Start developing.**
 
     ```shell
-    npm run develop
+    npm run clean && npm run develop
     ```
 
     Site is now running at http://localhost:8000
