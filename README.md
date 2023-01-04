@@ -4,7 +4,11 @@
 1.  **Install packages.**
 
     ```shell
+    rmdir /S node_modules
     npm install
+
+    # Fix outdated gatsby community plugins
+    npm install --legacy-peer-deps
     ```
 
 2.  **Start developing.**

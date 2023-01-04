@@ -8,8 +8,9 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
-    "gatsby-theme-material-ui",
     "gatsby-plugin-image",
+    "gatsby-theme-material-ui-top-layout",
+    "gatsby-plugin-material-ui",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,7 +29,7 @@ module.exports = {
     }, {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {
-        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+        linkStyles: false // (default: true) Enable/disable loading stylesheets via CDN
       }
     }
   ]

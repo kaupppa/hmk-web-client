@@ -14,6 +14,9 @@ export default function Yhteystiedot() {
       <CardContent>
         <MyCardHeader alt="Kirjekuori" src={MyAvatar} title="Yhteystiedot" />
         <Typography>
+          {info.toiminimi}
+        </Typography>
+        <Typography>
           {info.henkiloNimi}
         </Typography>
         <Typography>

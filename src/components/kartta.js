@@ -1,11 +1,29 @@
 import * as React from 'react';
 import { CardContent, CardMedia, Card, Typography } from '@mui/material';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import getInfo from '../service/Info-service';
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
 export default function Kartta() {
   const info = getInfo()
   const title = info.katuosoite + ', ' + info.postiosoite + ' ' + info.kaupunki
+  let marker;
+  if (typeof window !== 'undefined') {
+    marker = L.icon({
+      iconUrl: markerIcon,
+      iconRetinaUrl: markerIcon2x,
+      shadowUrl: markerShadow,
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      tooltipAnchor: [16, -28],
+      shadowSize: [41, 41]
+    });
+  }
 
   return (
     <Card sx={{
@@ -38,7 +56,7 @@ export default function Kartta() {
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
               />
-              <Marker position={info.coord}>
+              <Marker position={info.coord} icon={marker}>
                 <Popup>
                   <Typography>
                     Parkkipaikka

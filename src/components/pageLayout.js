@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Box, CssBaseline } from '@mui/material';
 import NavBar from './navbar';
 

@@ -1,5 +1,5 @@
-import React from 'react';
-import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material';
+import * as React from 'react';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 import { Button } from 'gatsby-theme-material-ui';
 
 const NavButton = ({ to, title, pathName }) => {
