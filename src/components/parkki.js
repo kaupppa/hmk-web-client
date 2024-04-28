@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { Button, CardContent, CardActions } from '@mui/material';
+import { Button, CardContent, CardActions, Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import MyAvatar from "../images/auto.png"
-import MyCardHeader from "./myCardHeader"
+import DirectionsCarFilledSharpIcon from '@mui/icons-material/DirectionsCarFilledSharp';
 import MyCard from "./MyCard"
 
 export default function Parkki() {
@@ -10,7 +9,21 @@ export default function Parkki() {
   return (
     <MyCard >
       <CardContent>
-        <MyCardHeader alt="Auto" src={MyAvatar} title="Omalla autolla" />
+      <Box sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                flexWrap: 'nowrap',
+                alignItems: 'center',
+                alignContent: 'flex-start',
+                marginBottom: '16px'
+            }}>
+            <DirectionsCarFilledSharpIcon color="success" fontSize="large" />
+            <Typography variant="h2" sx={{
+              marginLeft: '4px'
+                }}>
+            Omalla autolla
+            </Typography>
+        </Box>
         <Typography>
           Liikehuoneiston edessä on yksi asiakasparkkipaikka
         </Typography>

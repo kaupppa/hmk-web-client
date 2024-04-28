@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { CardContent } from '@mui/material';
+import { CardContent, Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import getInfo from '../service/Info-service';
-import MyAvatar from "../images/kirjekuori.png"
-import MyCardHeader from "./myCardHeader"
+import ContactMailSharpIcon from '@mui/icons-material/ContactMailSharp';
 import MyCard from "./MyCard"
 
 export default function Yhteystiedot() {
@@ -12,7 +11,21 @@ export default function Yhteystiedot() {
   return (
     <MyCard >
       <CardContent>
-        <MyCardHeader alt="Kirjekuori" src={MyAvatar} title="Yhteystiedot" />
+      <Box sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                flexWrap: 'nowrap',
+                alignItems: 'center',
+                alignContent: 'flex-start',
+                marginBottom: '16px'
+            }}>
+            <ContactMailSharpIcon color="success" fontSize="large" />
+            <Typography variant="h2" sx={{
+              marginLeft: '4px'
+                }}>
+            Yhteystiedot
+            </Typography>
+        </Box>
         <Typography>
           {info.toiminimi}
         </Typography>

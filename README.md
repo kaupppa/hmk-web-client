@@ -9,6 +9,7 @@
 
     # Fix outdated gatsby community plugins
     npm install --legacy-peer-deps
+    npm install --force
     ```
 
 2.  **Start developing.**

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { CardContent } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
+import StarIcon from '@mui/icons-material/Star';
 import MyCard from "./MyCard"
 
 export default function Kehut() {
@@ -19,7 +19,7 @@ export default function Kehut() {
                 }}>
                     Viisi tähteä.
                 </Typography>
-                <StarBorderIcon /><StarBorderIcon /><StarBorderIcon /><StarBorderIcon /><StarBorderIcon />
+                <StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon />
                 <Typography>
                     -- Minnan aviomies
                 </Typography>

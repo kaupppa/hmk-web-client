@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CardContent, CardMedia, Card, Typography } from '@mui/material';
+import { CardContent, CardMedia, Card, Typography, Box } from '@mui/material';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import getInfo from '../service/Info-service';
 import "leaflet/dist/leaflet.css";
@@ -7,6 +7,7 @@ import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import MapSharpIcon from '@mui/icons-material/MapSharp';
 
 export default function Kartta() {
   const info = getInfo()
@@ -32,9 +33,21 @@ export default function Kartta() {
       height: "1"
     }} >
       <CardContent>
-        <Typography variant="h2" >
-          {title}
-        </Typography>
+      <Box sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                flexWrap: 'nowrap',
+                alignItems: 'center',
+                alignContent: 'flex-start',
+                marginBottom: '16px'
+            }}>
+            <MapSharpIcon color="success" fontSize="large" />
+            <Typography variant="h2" sx={{
+              marginLeft: '4px'
+                }}>
+            Kartta {title}
+            </Typography>
+        </Box>
         <CardMedia sx={{
           margin: { xs: '4px', sm: '8px', md: '16px', lg: '32px' }
         }}>

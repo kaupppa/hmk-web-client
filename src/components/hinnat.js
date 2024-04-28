@@ -8,6 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import get from '../service/palvelu';
 import MyCard from "./MyCard"
+import CreditCardRoundedIcon from '@mui/icons-material/CreditCardRounded';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -33,12 +34,20 @@ export default function Hinnat() {
   return (
     <MyCard >
       <CardContent>
-        <Box sx={{
-          marginBottom: '16px'
-        }}>
-          <Typography variant="h1">
+      <Box sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                flexWrap: 'nowrap',
+                alignItems: 'center',
+                alignContent: 'flex-start',
+                marginBottom: '16px'
+            }}>
+            <CreditCardRoundedIcon color="success" fontSize="large" />
+            <Typography variant="h2" sx={{
+              marginLeft: '4px'
+                }}>
             Hinnasto
-          </Typography>
+            </Typography>
         </Box>
         <Table aria-label="Hinnasto">
           <TableHead>

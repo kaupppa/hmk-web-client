@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { CardContent } from '@mui/material';
+import { CardContent, Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
+import PhoneSharpIcon from '@mui/icons-material/PhoneSharp';
 import getInfo from '../service/Info-service';
-import MyAvatar from "../images/puhelin.png"
-import MyCardHeader from "./myCardHeader"
 import MyCard from "./MyCard"
 
 export default function Ajanvaraus() {
@@ -11,7 +10,21 @@ export default function Ajanvaraus() {
   return (
     <MyCard >
       <CardContent>
-        <MyCardHeader alt="Puhelin" src={MyAvatar} title="Ajanvaraus" />
+      <Box sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                flexWrap: 'nowrap',
+                alignItems: 'center',
+                alignContent: 'flex-start',
+                marginBottom: '16px'
+            }}>
+            <PhoneSharpIcon color="success" fontSize="large" />
+            <Typography variant="h2" sx={{
+              marginLeft: '4px'
+                }}>
+            Ajanvaraus
+            </Typography>
+        </Box>
         <Typography>
           Ajanvaraus numerosta {info.puh}
         </Typography>

@@ -56,7 +56,7 @@ export default function Etusivu() {
         <meta name="geo.placename" content={info.kaupunki} />
         <meta name="geo.position" content={info.coord.lat + ';' + info.coord.lon} />
         <meta name="ICBM" content={info.coord.lat + ', ' + info.coord.lon} />
-        <meta name="keywords" content="klassinen hieronta, hieroja, hieronta, lauttasaari" />
+        <meta name="keywords" content="klassinen hieronta,hieroja,hieronta,lauttasaari,Minna Kauppinen,Klassinen hieronta MinnaMaarit" />
         <script type="application/ld+json">
           {ldJJson}
         </script>
